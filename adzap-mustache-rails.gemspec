@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name    = "mustache-rails"
+  s.name    = "adzap-mustache-rails"
   s.version = "0.2.3"
 
   s.homepage = "https://github.com/josh/mustache-rails"
@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.files = Dir["README.md", "lib/**/*"]
 
   s.add_dependency "actionpack", ">=3.1"
-  s.add_dependency "mustache", "~>0.99.4"
+  s.add_dependency "mustache", "0.99.4"
   s.add_development_dependency "rake"
 
   s.author = "Joshua Peek"
