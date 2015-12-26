@@ -73,3 +73,7 @@ module ActionView
     end
   end
 end
+
+class ActionDispatch::Flash::FlashHash
+  alias_method :has_key?, :key?
+end
