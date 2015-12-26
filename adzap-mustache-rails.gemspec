@@ -4,12 +4,12 @@ Gem::Specification.new do |s|
 
   s.homepage = "https://github.com/josh/mustache-rails"
   s.summary  = "Mustache Rails adapter"
-  s.description = "Implements Mustache views and templates for Rails 3.x"
+  s.description = "Implements Mustache views and templates for Rails 4.0"
 
   s.files = Dir["README.md", "lib/**/*"]
 
-  s.add_dependency "actionpack", ">=3.1"
-  s.add_dependency "mustache", "0.99.4"
+  s.add_dependency "actionpack", ">= 3.2", "< 5.0"
+  s.add_dependency "mustache", "~> 0.99.8"
   s.add_development_dependency "rake"
 
   s.author = "Joshua Peek"

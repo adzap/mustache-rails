@@ -49,7 +49,7 @@ module ActionView
       # content - Array of section content tokens
       #
       # Returns String.
-      def on_section(name, content, raw, delims)
+      def on_section(name, offset, content, raw, delims)
         "v = #{compile!(name)}; ctx._eval_section(self, @output_buffer, v) {\n#{compile!(content)}\n}; "
       end
 
@@ -59,7 +59,7 @@ module ActionView
       # content - Array of section content tokens
       #
       # Returns String.
-      def on_inverted_section(name, content, raw, delims)
+      def on_inverted_section(name, offset, content, raw, delims)
         "v = #{compile!(name)}; ctx._eval_inverted_section(@output_buffer, v) {\n#{compile!(content)}\n}; "
       end
 
@@ -69,7 +69,7 @@ module ActionView
       # indentation - String of indentation level
       #
       # Returns String.
-      def on_partial(name, indentation)
+      def on_partial(name, offset, indentation)
         "@output_buffer.concat(render(:partial => #{name.inspect}));\n"
       end
 
@@ -78,7 +78,7 @@ module ActionView
       # name - String name of tag
       #
       # Returns String.
-      def on_utag(name)
+      def on_utag(name, offset)
         "v = #{compile!(name)}; ctx._eval_utag(@output_buffer, v); "
       end
 
@@ -87,7 +87,7 @@ module ActionView
       # name - String name of tag
       #
       # Returns String.
-      def on_etag(name)
+      def on_etag(name, offset)
         "v = #{compile!(name)}; ctx._eval_etag(@output_buffer, v); "
       end
 

@@ -1,4 +1,3 @@
-source :rubygems
 gemspec
 
 if version = ENV['ACTIONPACK_VERSION']

@@ -1,4 +1,6 @@
+require 'yaml'
 require 'mustache_test'
+require 'action_dispatch/http/mime_type'
 
 class TestSpec < MustacheTest
   def self.define_test_method(test)
