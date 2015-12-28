@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
   s.add_dependency "mustache", ">= 0.99.8"
   s.add_development_dependency "rake"
 
-  s.author = "Joshua Peek"
-  s.email  = "josh@joshpeek.com"
+  s.author = "Adam Meehan"
+  s.email  = "adam.meehan@gmail.com"
 end
